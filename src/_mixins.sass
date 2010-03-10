@@ -43,8 +43,11 @@
   :-moz-box-shadow 2px 2px 5px rgba(0, 0, 0, 0.25)
 
 =border_radius(!r)
+  // Opera 10.5, IE 9
   :border-radius= !r
+  // Saf3+, Chrome
   :-webkit-border-radius= !r
+  // FF1+
   :-moz-border-radius= !r
   
 =round_corners(!tr = 5px, !br = 5px, !bl = 5px, !tl = 5px)
