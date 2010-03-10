@@ -64,3 +64,15 @@
     :-moz-border-radius-topleft = !tl
     :-webkit-border-top-left-radius = !tl
 
+=box_gradient(!top, !bottom)
+  // F3.6 
+  :background-image = "-moz-linear-gradient(top, #{!top}, #{!bottom})"
+  // Saf4+, Chrome
+  :background-image = "-webkit-gradient(linear, left top, left bottom, from(!top), to(!bottom))"
+  // IE6, IE7
+  :filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{!top}', endColorstr='#{!bottom}')"
+  // IE8
+  :-ms-filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{!top}', endColorstr='#{!bottom}')"
+
+
+
