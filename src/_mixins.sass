@@ -1,0 +1,62 @@
+=mp
+  margin: 0px
+  padding: 0px
+  
+=inline-list
+  +mp
+  list-style-type: none
+  display: inline
+
+  li
+    +mp
+    display: inline
+
+// Set all the colors for a link with one mixin call
+// Order of arguments is:
+// normal, hover, active, visited, focus
+// states not specified will inherit.
+// Mixin like so:
+// a
+//   +link-colors(#00c, #0cc, #c0c, #ccc, #cc0)
+
+=link-colors(!normal, !hover = false, !active = false, !visited = false, !focus = false)
+  color= !normal
+  @if !visited
+    &:visited
+      color= !visited
+  @if !focus
+    &:focus
+      color= !focus
+  @if !hover
+    &:hover
+      color= !hover
+  @if !active
+    &:active
+      color= !active
+
+  
+
+=drop_shadow
+  :box-shadow 2px 2px 5px rgba(0, 0, 0, 0.25)
+  :-webkit-box-shadow 2px 2px 5px rgba(0, 0, 0, 0.25)
+  :-moz-box-shadow 2px 2px 5px rgba(0, 0, 0, 0.25)
+
+=border_radius(!r)
+  :border-radius= !r
+  :-webkit-border-radius= !r
+  :-moz-border-radius= !r
+  
+=round_corners(!tr = 5px, !br = 5px, !bl = 5px, !tl = 5px)
+  @if !tr
+    :-moz-border-radius-topright = !tr
+    :-webkit-border-top-right-radius = !tr
+  @if !br
+    :-moz-border-radius-bottomright = !br
+    :-webkit-border-bottom-right-radius = !br
+  @if !bl
+    :-moz-border-radius-bottomleft = !bl
+    :-webkit-border-bottom-left-radius = !bl
+  @if !tl
+    :-moz-border-radius-topleft = !tl
+    :-webkit-border-top-left-radius = !tl
+
