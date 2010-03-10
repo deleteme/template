@@ -1,29 +1,32 @@
-body { color: red; }
+/* symbols */
 
+/* type */
+
+/* grid */
 #grid { width: 940px; }
 
-.col-1, .col-60pxpx { width: 60px; }
+.col_1, .col_60pxpx { width: 60px; }
 
-.col-2, .col-140pxpx { width: 140px; }
+.col_2, .col_140pxpx { width: 140px; }
 
-.col-3, .col-220pxpx { width: 220px; }
+.col_3, .col_220pxpx { width: 220px; }
 
-.col-4, .col-300pxpx { width: 300px; }
+.col_4, .col_300pxpx { width: 300px; }
 
-.col-5, .col-380pxpx { width: 380px; }
+.col_5, .col_380pxpx { width: 380px; }
 
-.col-6, .col-460pxpx { width: 460px; }
+.col_6, .col_460pxpx { width: 460px; }
 
-.col-7, .col-540pxpx { width: 540px; }
+.col_7, .col_540pxpx { width: 540px; }
 
-.col-8, .col-620pxpx { width: 620px; }
+.col_8, .col_620pxpx { width: 620px; }
 
-.col-9, .col-700pxpx { width: 700px; }
+.col_9, .col_700pxpx { width: 700px; }
 
-.col-10, .col-780pxpx { width: 780px; }
+.col_10, .col_780pxpx { width: 780px; }
 
-.col-11, .col-860pxpx { width: 860px; }
+.col_11, .col_860pxpx { width: 860px; }
 
-.col-12, .col-940pxpx { width: 940px; }
+.col_12, .col_940pxpx { width: 940px; }
 
 .last { margin-right: 0; }

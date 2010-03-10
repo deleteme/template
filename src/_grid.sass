@@ -1,7 +1,10 @@
+/* grid */
+
 // 8 columns
 //!columns = 8
 //!column_width = 100px
 //!column_margin = 10px
+
 // 12 columns
 !columns = 12
 !column_width = 60px
@@ -15,10 +18,10 @@
  
 // Columns
 @for !i from 1 through !columns
-  .col-#{!i}, .col-#{!column_width * !i + (!column_margin * (!i - 1))}px
+  .col_#{!i}, .col_#{!column_width * !i + (!column_margin * (!i - 1))}px
     :width = !column_width * !i + (!column_margin * (!i - 1))
  
 .last
-  :margin
-    :right 0
+  :margin-right 0
+
 
