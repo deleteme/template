@@ -74,5 +74,17 @@
   // IE8
   :-ms-filter = "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{!top}', endColorstr='#{!bottom}')"
 
+//=background_rgba(!color, #opacity)
+  :background-color = !color
+  background-color: #B4B490;
+  background-color: rgba(180, 180, 144, 0.6);  /* FF3+, Saf3+, Opera 10.10+, Chrome */
+            filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#99B4B490',endColorstr='#99B4B490'); /* IE6,IE7 */
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#99B4B490',endColorstr='#99B4B490')"; /* IE8 */
 
+//=rotate
+     -moz-transform: rotate(7.5deg);  /* FF3.5+ 
+       -o-transform: rotate(7.5deg);  /* Opera 10.5 
+  -webkit-transform: rotate(7.5deg);  /* Saf3.1+, Chrome 
+             filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);  /* IE6,IE7 
+         -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 
 
