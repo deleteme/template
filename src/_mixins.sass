@@ -37,10 +37,15 @@
 
   
 
-=drop_shadow
-  :box-shadow 2px 2px 5px rgba(0, 0, 0, 0.25)
-  :-webkit-box-shadow 2px 2px 5px rgba(0, 0, 0, 0.25)
-  :-moz-box-shadow 2px 2px 5px rgba(0, 0, 0, 0.25)
+=drop_shadow(!x, !y, !blur, !color)
+  // Opera 10.5, IE 9
+  :box-shadow = !x !y !blur !color
+  :-webkit-box-shadow = !x !y !blur !color
+  :-moz-box-shadow= !x !y !blur !color
+  // IE6, IE7
+  :filter= "progid:DXImageTransform.Microsoft.dropshadow(OffX=#{!x}, OffY=#{!y}, Color='#{!color}')" 
+  // IE8
+  :-ms-filter= "progid:DXImageTransform.Microsoft.dropshadow(OffX=#{!x}, OffY=#{!y}, Color='#{!color}')"
 
 =border_radius(!r)
   // Opera 10.5, IE 9
