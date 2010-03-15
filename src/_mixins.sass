@@ -82,14 +82,16 @@
 
 =text_shadow(!x, !y, !blur, !color)
   :text-shadow = !x !y !blur !color
-  
-//=background_rgba(!color, #opacity)
-  :background-color = !color
-  background-color: #B4B490;
-  background-color: rgba(180, 180, 144, 0.6);  /* FF3+, Saf3+, Opera 10.10+, Chrome */
-            filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#99B4B490',endColorstr='#99B4B490'); /* IE6,IE7 */
-        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#99B4B490',endColorstr='#99B4B490')"; /* IE8 */
 
+=box_rgba(!r, !g, !b, !a, !hex)
+  // FF3+, Saf3+, Opera 10.10+, Chrome
+  :background-color= "rgba(#{!r}, #{!g}, #{!b}, #{!a})"
+  // IE6,IE7 
+  !IE_color= "##{!a*100}#{!hex}"
+  :filter= "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{!IE_color}',endColorstr='#{!IE_color}')"
+  // IE8 
+  :-ms-filter= "\"progid:DXImageTransform.Microsoft.gradient(startColorstr='#{!IE_color}',endColorstr='#{!IE_color}')\""
+  
 //=rotate
      -moz-transform: rotate(7.5deg);  /* FF3.5+ 
        -o-transform: rotate(7.5deg);  /* Opera 10.5 
