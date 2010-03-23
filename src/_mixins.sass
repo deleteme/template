@@ -99,3 +99,19 @@
              filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);  /* IE6,IE7 
          -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 
 
+=clearfix
+  &:after
+    :content ' '
+    :clear both
+    :display block
+    :font-size 0
+    :height 1px
+    :visibility hidden
+
+  // IE6, IE7
+  * html &, *:first-child+html &
+    :zoom 1
+  
+
+.clearfix
+  +clearfix
