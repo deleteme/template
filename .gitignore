@@ -1,2 +1,4 @@
 *.vim
+src/.sass-cache/*/*.sassc
+*.sassc
 *.DS_Store
